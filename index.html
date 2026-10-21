@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CloudVibe | Unofficial AZ-900 Prep</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- MANDATORY UNOFFICIAL DISCLAIMER -->
+    <div class="disclaimer-banner">
+        ⚠️ UNOFFICIAL AZ-900 Prep Tool. Not affiliated with, endorsed by, or sponsored by Microsoft. Practice questions are original and for educational purposes only.
+    </div>
+
+    <header class="app-header">
+        <div class="header-content">
+            <div class="logo-group">
+                <!-- Custom Abstract Cloud Icon (NO Microsoft Logos) -->
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+                    </svg>
+                </div>
+                <h1>CloudVibe</h1>
+            </div>
+            <nav class="main-nav">
+                <button class="nav-btn active" data-target="quiz-section">Smart Quiz</button>
+                <button class="nav-btn" data-target="flashcard-section">Flashcard Coach</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="app-main">
+        <!-- SMART QUIZ SECTION -->
+        <section id="quiz-section" class="content-section active">
+            <div class="section-header">
+                <h2>Smart Quiz Builder</h2>
+                <div class="score-badge">Score: <span id="quiz-score">0</span>/<span id="quiz-total">0</span></div>
+            </div>
+            <div class="quiz-card" id="quiz-card">
+                <!-- Quiz content injected via JS -->
+            </div>
+        </section>
+
+        <!-- FLASHCARD COACH SECTION -->
+        <section id="flashcard-section" class="content-section">
+            <div class="section-header">
+                <h2>Flashcard Coach</h2>
+                <div class="card-counter"><span id="card-current">1</span> / <span id="card-total">0</span></div>
+            </div>
+            
+            <div class="flashcard-container" id="flashcard-container">
+                <!-- Flashcard injected via JS -->
+            </div>
+
+            <div class="coach-panel">
+                <h3>🧠 AI Flashcard Coach</h3>
+                <p class="coach-subtitle">Select a learning style to generate an explanation.</p>
+                <div class="coach-controls">
+                    <button class="coach-btn analogy" data-style="analogy">Explain with Analogy</button>
+                    <button class="coach-btn simple" data-style="simple">Explain Like I'm 5</button>
+                    <button class="coach-btn toggle-prompt" id="toggle-prompt-btn">View Engineered Prompt</button>
+                </div>
+                
+                <!-- Prompt Engineering Showcase -->
+                <div class="prompt-showcase hidden" id="prompt-showcase">
+                    <h4>⚙️ Engineered System Prompt</h4>
+                    <pre id="prompt-text"></pre>
+                </div>
+
+                <div class="coach-response hidden" id="coach-response">
+                    <h4>💡 Coach Explanation</h4>
+                    <p id="response-text"></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="app-footer">
+        <p>Built for the Vibe Coding Hackathon: AZ-900 Exam Prep Edition.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
