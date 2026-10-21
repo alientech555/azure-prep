@@ -57,7 +57,7 @@ body {
 .logo-group { display: flex; align-items: center; gap: 0.75rem; }
 .logo-icon { width: 40px; height: 40px; background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue)); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; }
 .logo-icon svg { width: 24px; height: 24px; }
-h1 { font-size: 1.5rem; background: linear-gradient(90deg, var(--accent-cyan), var(--accent-blue)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+h1 { font-size: 1.5rem; background: linear-gradient(90deg, var(--accent-cyan), var(--accent-blue)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
 
 .main-nav { display: flex; gap: 1rem; }
 .nav-btn {
